@@ -24,6 +24,10 @@ export class TodoInputComponent extends CdTreeItem {
 
   @HostListener('keyup.enter')
   addValue() {
+    if (this.inputValue.trim() === '') {
+      return;
+    }
+    
     this.add.emit(this.inputValue);
     this.inputValue = '';
   }

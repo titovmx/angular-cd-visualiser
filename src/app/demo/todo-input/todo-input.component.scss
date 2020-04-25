@@ -1,0 +1,26 @@
+:host {
+  > * {
+    font-size: 18px;
+  }
+
+  .todo-input-control {
+    padding: 4px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-right: 16px;
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid #64B5F6;
+    }
+  }
+
+  .todo-add {
+    min-width: 120px;
+    min-height: 30px;
+    background-color: #1E88E5;
+    color: rgba(255, 255, 255, 0.87);
+    border: none;
+    border-radius: 3px;
+  }
+}

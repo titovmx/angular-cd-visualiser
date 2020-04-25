@@ -1,6 +1,17 @@
-<div class="round-checkbox">
-  <input type="checkbox"
-         id="checkbox" />
-  <label for="checkbox"></label>
-</div>
-<span>{{ value }}</span>
+<ng-container *ngIf="!isEditMode">
+  <div class="round-checkbox">
+    <input type="checkbox"
+           id="checkbox" />
+    <label for="checkbox"></label>
+  </div>
+  <span (click)="onLabelClick($event)"
+        class="todo-list-item-label">{{ value }}</span>
+</ng-container>
+
+<input #inputElement
+       *ngIf="isEditMode"
+       type="text"
+       [value]="value"
+       (change)="onValueChange($event)"
+       (blur)="onInputBlur($event)"
+       class="todo-list-item-input-control" />

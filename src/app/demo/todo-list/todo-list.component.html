@@ -1,2 +1,3 @@
-<todo-list-item *ngFor="let item of items"
-                [value]="item"></todo-list-item>
+<todo-list-item *ngFor="let item of items; let i = index"
+                [value]="item"
+                (valueChange)="onValueChange($event, i)"></todo-list-item>

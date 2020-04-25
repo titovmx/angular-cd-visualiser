@@ -1,6 +1,8 @@
 <input type="text"
        autofocus
        [value]="inputValue"
+       [placeholder]="placeholder"
        (change)="onInputChange($event)"
-       [placeholder]="placeholder" />
-<button (click)="addValue()">Add</button>
+       class="todo-input-control" />
+
+<button (click)="addValue()" class="todo-add">Add</button>

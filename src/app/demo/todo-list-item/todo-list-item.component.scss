@@ -1,14 +1,35 @@
 :host {
   margin: 8px 0;
   display: flex;
+  align-self: start;
+
+  > * {
+    font-size: 18px;
+  }
 
   &:first-child {
     margin-top: 0;
   }
 
   span {
-    font-size: 18px;
     line-height: 32px;
+  }
+
+  .todo-list-item-label {
+    cursor: pointer;
+  }
+
+  .todo-list-item-input-control {
+    align-self: start;
+    padding: 4px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin-right: 16px;
+
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid #64B5F6;
+    }
   }
 }
 

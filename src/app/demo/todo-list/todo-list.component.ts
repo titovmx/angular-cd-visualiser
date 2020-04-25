@@ -14,4 +14,10 @@ export class TodoListComponent extends CdTreeItem {
   constructor(cdViewerBuilderService: CdViewerBuilderService) {
     super(cdViewerBuilderService, 'TodoListComponent', 1);
   }
+
+  onValueChange(newValue: string, index: number) {
+    const copiedItems = this.items.slice();
+    copiedItems[index] = newValue;
+    this.items = copiedItems;
+  }
 }
